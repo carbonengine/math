@@ -21,7 +21,7 @@ inline bool CcpIsFinite( float x )
 #ifdef _MSC_VER
     return _finite( x ) != 0;
 #else
-    return isfinite( x );
+    return std::isfinite( x );
 #endif
 }
 
