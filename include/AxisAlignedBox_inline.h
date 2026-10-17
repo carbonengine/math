@@ -121,8 +121,8 @@ inline bool AxisAlignedBox::IsPointInside( const Vector3& pos ) const
 
 inline bool AxisAlignedBox::Intersects( const AxisAlignedBox& other ) const
 {
-	return !( m_max.x > other.m_min.x || m_max.y > other.m_min.y || m_max.z > other.m_min.z ||
-			  m_min.x < other.m_max.x || m_min.y < other.m_max.y || m_min.z < other.m_max.z );
+	return !( m_max.x < other.m_min.x || m_max.y < other.m_min.y || m_max.z < other.m_min.z ||
+			  m_min.x > other.m_max.x || m_min.y > other.m_max.y || m_min.z > other.m_max.z );
 }
 
 inline void AxisAlignedBox::Offset( const Vector3& by )
