@@ -1,6 +1,7 @@
 find_package(GTest REQUIRED)
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 add_executable(CcpMathTest
+    AxisAlignedBox.cpp
     CcpFloat.h
     Color.cpp
     Float16.cpp
