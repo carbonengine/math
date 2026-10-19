@@ -250,7 +250,7 @@ class Publish(perforce_publish_path: String) : BuildType({
                 artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
             }
         }
-        dependency(Linux.amd64_Debug) {
+        dependency(Linux.x64_Debug) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -259,7 +259,7 @@ class Publish(perforce_publish_path: String) : BuildType({
                 artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Linux.amd64_Debug.depParamRefs["env.GIT_TAG_HASH"]}"
             }
         }
-        dependency(Linux.amd64_Internal) {
+        dependency(Linux.x64_Internal) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -268,7 +268,7 @@ class Publish(perforce_publish_path: String) : BuildType({
                 artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Linux.amd64_Internal.depParamRefs["env.GIT_TAG_HASH"]}"
             }
         }
-        dependency(Linux.amd64_Release) {
+        dependency(Linux.x64_Release) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -277,7 +277,7 @@ class Publish(perforce_publish_path: String) : BuildType({
                 artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Linux.amd64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
             }
         }
-        dependency(Linux.amd64_TrinityDev) {
+        dependency(Linux.x64_TrinityDev) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
