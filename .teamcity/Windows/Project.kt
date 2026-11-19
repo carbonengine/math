@@ -20,11 +20,11 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 import jetbrains.buildServer.configs.kotlin.buildFeatures.provideAwsCredentials
 
-val BuildParameters = "-arch=x64 -vcvars_ver=14.51"
-val Debug = CarbonBuildWindows("Debug Windows", "Debug", "x64-windows-debug", BuildParameters)
-val Internal = CarbonBuildWindows("Internal Windows", "Internal", "x64-windows-internal", BuildParameters)
-val TrinityDev = CarbonBuildWindows("TrinityDev Windows", "TrinityDev", "x64-windows-trinitydev", BuildParameters)
-val Release = CarbonBuildWindows("Release Windows", "Release", "x64-windows-release", BuildParameters)
+val BuildParameters = "-arch=x64 -vcvars_ver=14.16"
+val Debug = CarbonBuildWindows("Debug Windows", "Debug", "x64-windows-141-debug", BuildParameters)
+val Internal = CarbonBuildWindows("Internal Windows", "Internal", "x64-windows-141-internal", BuildParameters)
+val TrinityDev = CarbonBuildWindows("TrinityDev Windows", "TrinityDev", "x64-windows-141-trinitydev", BuildParameters)
+val Release = CarbonBuildWindows("Release Windows", "Release", "x64-windows-141-release", BuildParameters)
 
 object Project : Project({
     id("Windows")
